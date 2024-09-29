@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS CURRENCY CONVERTER</title>
+    <style>
+        .head{
+            /* border: 1px solid black; */
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 150px;
+            text-align: center;
+        }
+        .main{
+            border: 1px solid black;
+            width: 50%;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.568);
+        
+        }
+        .box1{
+            /* border: 1px solid black; */
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .box2{
+            /* border: 1px solid black; */
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        #int1{
+            margin-top: 30px;
+            width: 80%;
+            height: 20px;
+            margin-left: auto;
+            margin-right: auto;   
+        }
+        #int2{
+            margin-top: 30px;
+            width: 80%;
+            height: 20px;
+            margin-left: auto;
+            margin-right: auto;   
+        }
+        span{
+            text-align: center;
+            font-size: larger;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+        body{
+            background-image: url("https://th.bing.com/th/id/OIP._cDmNnBYo2mbhRutWtphqgHaEK?rs=1&pid=ImgDetMain");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="head"><span style="color: white;">CURRENCY CONVERTER</span></div>
+    <div class="main">
+        <div class="box1">
+            <input type="number" name="" id="int1" oninput="myfn()">
+            <span>IND</span>
+        </div>
+        <div class="box2">
+            <input type="number" name="" id="int2" oninput="myfn2()">
+            <span>USD</span>
+        </div>
+    </div>
+
+
+    <script>
+        function myfn(){
+            document.getElementById("int2").value=document.getElementById("int1").value/83.14;
+        }
+
+        function myfn2(){
+            document.getElementById("int1").value=document.getElementById("int2").value*83.14;
+        }
+    </script>
+</body>
+</html>
